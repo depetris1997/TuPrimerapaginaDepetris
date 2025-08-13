@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TuPrimeraPagina Depetris</title>
+    <style>
+        body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; margin: 2rem; }
+        nav a { margin-right: .75rem; text-decoration: none; color: #1f5fbf; }
+        nav a:hover { text-decoration: underline; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .card { border: 1px solid #eee; border-radius: 10px; padding: 1rem; margin: 1rem 0; }
+        .btn { background: #1f5fbf; color: #fff; padding: .5rem .9rem; border-radius: 6px; border: none; cursor: pointer; }
+        .btn.secondary { background: #555; }
+        input, textarea, select { width: 100%; padding: .5rem; margin: .3rem 0 1rem; border: 1px solid #ccc; border-radius: 6px; }
+        table { width:100%; border-collapse: collapse; }
+        th, td { padding:.5rem; border-bottom:1px solid #eee; text-align:left; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Blog - TuPrimeraPagina (Depetris)</h1>
+        <nav>
+            <a href="/">Inicio</a>
+            <a href="/posts/">Posts</a>
+            <a href="/crear-autor/">Crear Autor</a>
+            <a href="/crear-categoria/">Crear Categoría</a>
+            <a href="/crear-post/">Crear Post</a>
+            <a href="/buscar/">Buscar</a>
+            <a href="/admin/">Admin</a>
+        </nav>
+        <hr>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

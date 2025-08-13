@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2>Crear Post</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn" type="submit">Publicar</button>
+    </form>
+    <p style="margin-top: .5rem;">¿No ves autores/categorías? Crealos primero desde el menú.</p>
+</div>
+{% endblock %}

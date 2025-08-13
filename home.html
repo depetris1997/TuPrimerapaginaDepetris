@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2>Bienvenido/a</h2>
+    <p>Proyecto Django con patrón MVT, herencia de plantillas y formularios para **Autor**, **Categoría** y **Post**.</p>
+</div>
+<div class="card">
+    <h3>Últimos posts</h3>
+    {% if ultimos %}
+    <ul>
+        {% for p in ultimos %}
+        <li><strong>{{ p.titulo }}</strong> — {{ p.autor }} · {{ p.categoria }} · {{ p.fecha|date:"d/m/Y H:i" }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+        <p>No hay publicaciones aún. ¡Creá la primera!</p>
+    {% endif %}
+</div>
+{% endblock %}

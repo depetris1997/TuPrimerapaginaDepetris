@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2>Todos los posts</h2>
+    {% if posts %}
+    <table>
+        <thead><tr><th>Título</th><th>Autor</th><th>Categoría</th><th>Fecha</th></tr></thead>
+        <tbody>
+        {% for p in posts %}
+            <tr>
+                <td>{{ p.titulo }}</td>
+                <td>{{ p.autor }}</td>
+                <td>{{ p.categoria }}</td>
+                <td>{{ p.fecha|date:"d/m/Y H:i" }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+        <p>No hay posts todavía.</p>
+    {% endif %}
+</div>
+{% endblock %}
